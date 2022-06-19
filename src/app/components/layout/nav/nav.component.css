@@ -27,10 +27,36 @@
 .sidenav i {
   margin-right: .6rem;
 }
-
-
-
-
+.drop-menu {
+  color: #fff;
+  border-radius: 20px;
+}
+.drop-menu:hover {
+  background: #fff;
+  color: #ff3636;
+  border-radius: 20px;
+}
+.mat-menu-item {
+  width: 15rem;
+  border-radius: 20px;
+}
+.mat-menu-item:hover {
+  background-color: #ff3636;
+  color: #fff;
+  border-radius: 20px;
+}
 .menu {
   margin: 1rem 0 0 1rem;
 }
+
+@media only screen and (max-width: 415px) {
+  .drop-menu:hover {
+    color: #fff;
+    border-radius: 20px;
+  }
+
+}
+
+
+
+

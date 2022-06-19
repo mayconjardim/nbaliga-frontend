@@ -1,31 +1,166 @@
 <mat-drawer-container class="container" autosize>
-  <mat-drawer #drawer class="sidenav mat-elevation-z8" mode="side">
+  <mat-drawer
+    #drawer
+    class="sidenav mat-elevation-z8"
+    mode="side"
+    [opened]="isMenuOpen"
+  >
     <img src="/assets/img/logos/nbaliga.png" alt="nbaliga logo" />
     <mat-nav-list class="nav-list">
       <a mat-list-item routerLink="/">
         <i class="material-icons">home</i>
         Home
       </a>
+      <!-- teams menu -->
+      <button mat-list-item class="drop-menu" [matMenuTriggerFor]="teams">
+        <i class="material-icons">groups</i> Times
+      </button>
+      <mat-menu #teams="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="east">
+          <mat-icon> east</mat-icon>Leste
+        </button>
+        <button mat-menu-item [matMenuTriggerFor]="west">
+          <mat-icon> west</mat-icon>Oeste
+        </button>
+      </mat-menu>
+
+      <mat-menu #east="matMenu">
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Celtics.svg" /></mat-icon>
+          Boston Celtics
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Nets.svg" /></mat-icon>Brooklyn
+          Nets
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Hornets.svg" /></mat-icon
+          >Charlotte Hornets
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Bulls.svg" /></mat-icon>Chicago
+          Bulls
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Pistons.svg" /></mat-icon
+          >Detroit Pistons
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Pacers.svg" /></mat-icon
+          >Indiana Pacers
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Heat.svg" /></mat-icon>Miami
+          Heat
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Knicks.svg" /></mat-icon>New
+          York Knicks
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/76ers.svg" /></mat-icon
+          >Philadelphia 76ers
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Raptors.svg" /></mat-icon
+          >Toronto Raptors
+        </button>
+      </mat-menu>
+
+      <mat-menu #west="matMenu">
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Warriors.svg" /></mat-icon
+          >Golden State Warriors
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Rockets.svg" /></mat-icon
+          >Houston Rockets
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Clippers.svg" /></mat-icon>Los
+          Angeles Clippers
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Lakers.svg" /></mat-icon>Los
+          Angeles Lakers
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Grizzlies.svg" /></mat-icon
+          >Memphis Grizzlies
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Timberwolves.svg" /></mat-icon
+          >Minnesota Timberwolves
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/TrailBlazers.svg" /></mat-icon
+          >Portland TrailBlazers
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Spurs.svg" /></mat-icon>San
+          Antonio Spurs
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Sonics.svg" /></mat-icon
+          >Seattle SuperSonics
+        </button>
+        <button mat-menu-item>
+          <mat-icon> <img src="/assets/img/logos/Jazz.svg" /></mat-icon>Utah
+          Jazz
+        </button>
+      </mat-menu>
+      <!-- liga menu  -->
+
+      <button mat-list-item class="drop-menu" [matMenuTriggerFor]="liga">
+        <i class="material-icons">emoji_events</i> Liga
+      </button>
+      <mat-menu #liga="matMenu">
+        <button mat-menu-item>
+          <mat-icon>calendar_month</mat-icon>Calendário
+        </button>
+        <button mat-menu-item><mat-icon>scoreboard</mat-icon>Resultados</button>
+        <button mat-menu-item><mat-icon>elevator</mat-icon>Draft Picks</button>
+        <button mat-menu-item>
+          <mat-icon>leaderboard</mat-icon>Head-To-Head
+        </button>
+      </mat-menu>
+
       <a mat-list-item routerLink="/">
-        <i class="material-icons">home</i>
-        Home
+        <i class="material-icons">percent</i>
+        Estatísticas
       </a>
       <a mat-list-item routerLink="/">
-        <i class="material-icons">home</i>
-        Home
+        <i class="material-icons">sports_handball</i>
+        Jogadores
       </a>
-      <a mat-list-item routerLink="/">
-        <i class="material-icons">home</i>
-        Home
-      </a>
-      <a mat-list-item routerLink="/">
-        <i class="material-icons">home</i>
-        Home
-      </a>
-      <a mat-list-item routerLink="/">
-        <i class="material-icons">home</i>
-        Home
-      </a>
+      <!-- Playoffs menu  -->
+
+      <button mat-list-item class="drop-menu" [matMenuTriggerFor]="playoffs">
+        <i class="material-icons">account_tree</i> Playoffs
+      </button>
+      <mat-menu #playoffs="matMenu">
+        <button mat-menu-item><mat-icon>list_alt</mat-icon>Tabela</button>
+        <button mat-menu-item>
+          <mat-icon>query_stats</mat-icon>Estatísticas Playoffs
+        </button>
+      </mat-menu>
+
+      <!-- Pós-Temporada menu  -->
+
+      <button mat-list-item class="drop-menu" [matMenuTriggerFor]="pos">
+        <i class="material-icons">business_center</i> Pós-Temporada
+      </button>
+      <mat-menu #pos="matMenu">
+        <button mat-menu-item>
+          <mat-icon>elevator</mat-icon>Draft Central
+        </button>
+        <button mat-menu-item>
+          <mat-icon>attach_money</mat-icon>Free Agency
+        </button>
+        <button mat-menu-item>
+          <mat-icon>query_stats</mat-icon>Estatísticas Playoffs
+        </button>
+      </mat-menu>
     </mat-nav-list>
   </mat-drawer>
 
