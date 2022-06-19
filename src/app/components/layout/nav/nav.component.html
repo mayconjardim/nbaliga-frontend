@@ -1,0 +1,41 @@
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav mat-elevation-z8" mode="side">
+    <img src="/assets/img/logos/nbaliga.png" alt="nbaliga logo" />
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">home</i>
+        Home
+      </a>
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">home</i>
+        Home
+      </a>
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">home</i>
+        Home
+      </a>
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">home</i>
+        Home
+      </a>
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">home</i>
+        Home
+      </a>
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">home</i>
+        Home
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <button class="menu" (click)="drawer.toggle()" mat-icon-button>
+      <img
+        class="basketball-icon"
+        src="/assets/img/utils/Basketball.svg"
+        alt="Basketball Ball"
+      />
+    </button>
+  </div>
+</mat-drawer-container>

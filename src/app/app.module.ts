@@ -11,11 +11,18 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+
+
+//Componentes
+import { NavComponent } from './components/layout/nav/nav.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +34,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatButtonModule,
     MatMenuModule,
     MatSidenavModule,
+    MatFormFieldModule,
+    MatSelectModule
 
   ],
   providers: [],
